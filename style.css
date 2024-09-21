@@ -7,7 +7,7 @@
     justify-content: center;
     align-self: center;
 }
-*{
+.main-left li{
     list-style: none;
 }
 .main-left {
@@ -209,4 +209,33 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .work {
     height: 50%;
+}
+
+/* work experience */
+
+.basic-2 {
+    font-size: 3vw;
+    margin-left: 3%;
+
+}
+
+.work-detail li {
+    font-size: 1.8vw;
+    list-style: circle;
+    margin:2% 0 1% 5%;
+    font-weight: 400;
+}
+.main-right2 ol {
+    font-size: 3vw;
+    font-weight: 700;
+
+
+}
+.main-right2 h1 {
+    font-size: 5vw;
+    margin-bottom: 5%;
+}
+
+.period {
+    font-size: 2vw;
 }
