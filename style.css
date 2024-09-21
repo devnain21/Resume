@@ -1,28 +1,15 @@
 .main { 
     background-color: rgb(236, 243, 243);
     height: 180vw;
-    width: 80vw;
+    width: 100vw;
     display: flex;
     border: .2vmin solid darkslategray;
     justify-content: center;
     align-self: center;
-    margin-left: 10vw;
 }
-@media (max-width:700px){
-.main {
-    margin-left: 3vw;
-    width: 90vw;
+*{
+    list-style: none;
 }
-}
-/* @media (max-width:450px){
-    .main{
-        margin: 0;
-        width: 100vw;
-        height: 100vh;
-    }
-} */
-
-
 .main-left {
     width: 30vw;
     height: 100%;
@@ -32,11 +19,21 @@
     align-content: space-evenly;
     align-items: flex-end;
     margin: 0;
-    padding: 0;
+    padding-left: 3%;
     color: white;
     border-right: 1.7vh solid #449494;
     font-size: 2vw;
  
+}
+@media (max-width: 600px) {
+    .main-left {
+        padding-left: 0;
+    }
+}
+.basic {
+    padding-left:3%;
+    font-size: 2vw;
+    text-align: inherit;
 }
 
 .skill-photo{
@@ -46,12 +43,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2%;
 }
 
 
 
 .photo {
-    height: 25%;
+    height: 30%;
     width: 100%;
     border-radius: 90%;
     background-image: url(dev.jpg);
@@ -70,13 +68,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 60%;
+    height: 65%;
     width: 100%;
     background-color: transparent;
 }
 
 .edu {
-    height: 15%;
+    height: 18%;
     width: 100%;
 }  
 
@@ -118,26 +116,22 @@
 h1 { 
     margin-top: 2%;
     margin-bottom: 1%;
-    font-size: 3.5vw;
+    font-size: 3vw;
 }
 h1 i {
 padding: 4%;
 }
-.degree {
-    font-size: 2vw;
-    padding-left: 2%;    
-    margin-bottom: 2%;
-}
+
 h3 {
    
     margin: 2% 0% 2%;
 }
 h4 {
-    margin: 4% 0% 2% 3%;
+    margin: 4% 0% 2% 4%;
     font-size: 2vw;
 }
 .hobby i {
-    margin: 4% 0% 2% 3%;
+    margin: 4% 0% 3% 3%;
     padding-right: 3%;
 }
 
