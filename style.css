@@ -21,7 +21,7 @@
     margin: 0;
     padding-left: 3%;
     color: white;
-    border-right: 1.7vh solid #449494;
+    border-right: 1.3vw solid #449494;
     font-size: 2vw;
  
 }
@@ -142,7 +142,7 @@ h4 {
 .main-right2 {
     height: 100%;
     width: 70vw;
-    border-left: 1vw solid #A4CCCC; 
+    border-left: 1.3vw solid #A4CCCC; 
     order: 2;
     padding-left: 3%;
     padding-right: 3%;
