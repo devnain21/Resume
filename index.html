@@ -3,324 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Nain - Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <title>Resume - Dev Nain</title>
     
-    <style>
-        /* --- CSS Reset & Basics --- */
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <link rel="stylesheet" href="resume.css">
 
-        body {
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Top se start ho */
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        /* --- Main Resume Container (A4 Size Logic) --- */
-        .main {
-            display: flex;
-            width: 210mm; /* A4 Width */
-            min-height: 297mm; /* A4 Height (kam se kam) */
-            background-color: white;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            overflow: hidden; /* Round corners ke liye */
-        }
-
-        /* --- Left Side (Dark Blue) --- */
-        .main-left {
-            width: 35%; /* 35% hissa left ke liye */
-            background-color: #003147; /* Professional Dark Blue */
-            color: white;
-            padding: 30px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .photo {
-            width: 150px;
-            height: 150px;
-            background-color: #fff;
-            border-radius: 50%;
-            margin: 0 auto 20px auto;
-            overflow: hidden;
-            border: 4px solid #bba44e; /* Golden Border */
-        }
-        
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .main-left h1 {
-            font-size: 22px;
-            text-transform: uppercase;
-            border-bottom: 2px solid #bba44e;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .main-left ul {
-            list-style: none;
-        }
-
-        .main-left li {
-            margin-bottom: 10px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .main-left .hobby {
-            margin-bottom: 10px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* --- Right Side (White) --- */
-        .main-right2 {
-            width: 65%; /* 65% hissa right ke liye */
-            padding: 40px;
-            background-color: #fff;
-        }
-
-        .container-name {
-            margin-bottom: 30px;
-        }
-
-        .name h1 {
-            font-size: 40px;
-            color: #003147;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            line-height: 1;
-        }
-
-        .post {
-            font-size: 18px;
-            color: #bba44e; /* Golden Color */
-            font-weight: bold;
-            margin-top: 5px;
-            text-transform: uppercase;
-        }
-
-        .about {
-            font-size: 14px;
-            color: #333;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-            font-size: 13px;
-        }
-
-        .cont-info {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #003147;
-            font-weight: 600;
-        }
-
-        .cont-info i {
-            color: #bba44e;
-        }
-
-        .link {
-            text-decoration: none;
-            color: #003147;
-        }
-
-        /* --- Work Experience Styling --- */
-        .work h1 {
-            font-size: 24px;
-            color: #003147;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .work hr {
-            border: 0;
-            height: 2px;
-            background: #003147;
-            margin-bottom: 20px;
-        }
-
-        .company-post {
-            font-size: 18px;
-            color: #003147;
-            margin-bottom: 5px;
-        }
-
-        .period {
-            font-size: 13px;
-            color: #666;
-            font-style: italic;
-        }
-
-        .work-detail {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 25px;
-            margin-left: 10px;
-        }
-
-        .work-detail ol {
-            margin-bottom: 10px;
-        }
-
-        .work-detail li {
-            margin-left: 20px;
-            margin-bottom: 5px;
-            list-style-type: disc;
-        }
-
-        /* --- Print Specific CSS --- */
-        @media print {
-            body {
-                background: none;
-                padding: 0;
-                margin: 0;
-            }
-            .main {
-                box-shadow: none;
-                width: 100%;
-                min-height: 100vh;
-                margin: 0;
-            }
-            /* Colors print hone chahiye */
-            .main-left {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .main {
-                flex-direction: column;
-                width: 100%;
-                height: auto;
-            }
-            .main-left, .main-right2 {
-                width: 100%;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
 
-    <div class="main">
+    <div class="resume-container">
         
-        <div class="main-left">
-            <div class="skill-photo">
-                <div class="photo">
-                    <i class="fa-solid fa-user" style="font-size: 80px; color: #ccc; display: flex; justify-content: center; align-items: center; height: 100%;"></i>
+        <div class="left-side">
+            <div class="photo-container">
+                <img src="Photo.jpg" id="myProfilePhoto" alt="Dev Nain">
+            </div>
+
+            <div>
+                <h3 class="left-title">Contact</h3>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i> 
+                    <span>+91 8950101037</span>
                 </div>
-                
-                <div class="skill">
-                   <h1><i class="fa-solid fa-code"></i> SKILLS</h1>
-                   <ul>
-                       <li>HTML5 & CSS3</li>
-                       <li>JavaScript (ES6)</li>
-                       <li>Responsive Design</li>
-                       <li>WordPress Customization</li>
-                       <li>SEO Fundamentals</li>
-                       <li>VS Code & Git</li>
-                   </ul>
-                </div>   
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i> 
+                    <span>dnain81@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i> 
+                    <span>Danoda Kalan, Haryana</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-globe"></i> 
+                    <a href="https://naincsc.netlify.app" target="_blank">naincsc.netlify.app</a>
+                </div>
             </div>
 
-            <div class="edu">
-                <h1><i class="fa-solid fa-graduation-cap"></i> Education</h1>
-                <ul>
-                     <li><b>B.Sc. Computer Science</b><br>MDU, Rohtak</li>
-                </ul>
-                <ul class="12th basic" style="margin-top: 15px;">
-                    <li><b>12th (Non-Medical)</b><br>HBSE, Bhiwani</li>
+            <div>
+                <h3 class="left-title">Skills</h3>
+                <ul class="skills-list">
+                    <li>
+                        HTML5 & CSS3
+                        <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                    </li>
+                    <li style="margin-top:10px;">
+                        JavaScript (ES6)
+                        <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                    </li>
+                    <li style="margin-top:10px;">
+                        WordPress / CMS
+                        <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                    </li>
+                    <li style="margin-top:10px;">
+                        Responsive Design
+                        <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                    </li>
+                    <li style="margin-top:10px;">
+                        Photo Editing
+                        <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                    </li>
                 </ul>
             </div>
 
-            <div class="lang">
-                <h1><i class="fa-solid fa-language"></i> Languages</h1>
-                <ul>
-                    <li><b>Hindi:</b> Native</li>
-                    <li><b>English:</b> Professional</li>
-                </ul>
-            </div>
-
-            <div class="int">
-                <h1><i class="fa-solid fa-chess"></i> Interests</h1>
-                <div class="hobby"><i class="fa-solid fa-laptop-code"></i> Web Design</div>
-                <div class="hobby"><i class="fa-solid fa-camera"></i> Photo Editing</div>
-                <div class="hobby"><i class="fa-solid fa-gamepad"></i> Gaming</div>
+            <div>
+                <h3 class="left-title">Education</h3>
+                <div class="edu-item">
+                    <div class="edu-degree">B.Sc. Computer Science</div>
+                    <div class="edu-college">MDU, Rohtak</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-degree">12th (Non-Medical)</div>
+                    <div class="edu-college">HBSE, Bhiwani</div>
+                </div>
             </div>
         </div>
 
-        <div class="main-right2">
-            <div class="container-name">
-                <div class="name">
-                    <h1>Dev Nain</h1>
-                    <div class="post">Front-End Web Developer</div>
-                </div>
-            </div>
+        <div class="right-side">
             
-            <div class="about">
-                Passionate and detail-oriented Web Developer with hands-on experience in building responsive websites using HTML, CSS, and JavaScript. Successfully developed and deployed a service-based portal for 'Nain CSC Center'. Experienced in WordPress customization and content management. Eager to leverage technical skills to create user-friendly web solutions and contribute to innovative projects.
+            <div class="header-name">
+                <h1>Dev Nain</h1>
+                <div class="role">Front-End Web Developer</div>
             </div>
 
-            <div class="contact">
-                <div class="cont-info"><i class="fa-solid fa-envelope"></i> dnain81@gmail.com</div>
-                <div class="cont-info"><i class="fa-solid fa-mobile"></i> +91 8950101037</div>
-                <div class="cont-info"><i class="fa-solid fa-location-dot"></i> Danoda Kalan, Haryana</div>
-                <div class="cont-info"><i class="fa-solid fa-globe"></i> <a class="link" target="_blank" href="https://naincsc.netlify.app">naincsc.netlify.app</a></div>
+            <div class="summary">
+                Driven and skilled Web Developer with a strong background in creating responsive, user-friendly websites. Currently managing my own digital service portal (Nain CSC) built with HTML, CSS, and JS. Expertise in WordPress customization and solving real-world problems through code. Eager to contribute to a professional team with my technical and design skills.
             </div>
 
-            <div class="work">
-                <h1>Work Experience & Projects</h1>
-                <hr>
-                
-                <div class="company-post"><b>Web Developer (Freelance)</b></div>
-                <div class="period">Self-Employed [Oct 2023 - Present]</div>
-                <div style="font-size: 14px; margin-top: 5px; color: #444;"><b>Project:</b> Nain CSC Official Portal</div>
-                
-                <div class="work-detail">
-                    <ol>
-                        <li><b>Development & Design:</b> Developed a fully responsive website using HTML5, CSS3, and JavaScript to provide online government services. Designed a user-friendly interface grid for 50+ services.</li>
-                        <li><b>Functionality:</b> Integrated features like 'Offline Form Downloads' and 'LPG ID Finder' using optimized code. Ensured cross-browser compatibility.</li>
-                    </ol>
+            <h3 class="right-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+
+            <div class="timeline-box">
+                <div class="job-title">Web Developer (Freelance)</div>
+                <div class="job-company">Self-Employed (Nain CSC Center) | Oct 2023 - Present</div>
+                <ul class="job-details">
+                    <li>Designed and deployed <b>Nain CSC Official Portal</b> (naincsc.netlify.app) using HTML5, CSS3, and JavaScript.</li>
+                    <li>Created a dynamic "Offline Form Download" section and integrated LPG ID finder tools.</li>
+                    <li>Implemented a responsive Grid Layout ensuring the site works perfectly on Mobile and Desktop.</li>
+                    <li>Managed regular updates for government job notifications and admit cards.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-box">
+                <div class="job-title">WordPress Developer</div>
+                <div class="job-company">Freelance Project | 2022 - 2023</div>
+                <ul class="job-details">
+                    <li>Developed and customized a WordPress-based CMS for online services.</li>
+                    <li>Configured themes and plugins to improve SEO and site speed.</li>
+                    <li>Handled website maintenance, backups, and content updates.</li>
+                </ul>
+            </div>
+
+            <div class="lang-grid">
+                <div>
+                    <h3 class="right-title" style="font-size: 16px;"><i class="fa-solid fa-language"></i> Languages</h3>
+                    <ul class="job-details">
+                        <li><b>Hindi:</b> Native / Fluent</li>
+                        <li><b>English:</b> Professional</li>
+                    </ul>
                 </div>
-
-                <div class="company-post"><b>WordPress Developer</b></div>
-                <div class="period">Previous Project [2022 - 2023]</div>
-                <div style="font-size: 14px; margin-top: 5px; color: #444;"><b>Project:</b> Online Service CMS Portal</div>
-
-                <div class="work-detail">
-                    <ol>
-                        <li><b>CMS Management:</b> Built and managed a dynamic website using WordPress themes. Customized layouts and plugins for SEO.</li>
-                        <li><b>Maintenance:</b> Handled regular updates, backups, and content uploads for government schemes.</li>
-                    </ol>
+                <div>
+                    <h3 class="right-title" style="font-size: 16px;"><i class="fa-solid fa-heart"></i> Interests</h3>
+                    <ul class="job-details">
+                        <li>Coding & Development</li>
+                        <li>Photo Editing & Design</li>
+                    </ul>
                 </div>
             </div>
+
         </div>
     </div>
 
